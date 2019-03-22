@@ -56,15 +56,55 @@
 		29263C2C2244EFFB0084D725 /* Goal Post */ = {
 			isa = PBXGroup;
 			children = (
-				29263C2D2244EFFB0084D725 /* AppDelegate.swift */,
+				29263C452244F1310084D725 /* Extensions */,
+				29263C442244F11A0084D725 /* Enums */,
+				29263C432244F1110084D725 /* View */,
+				29263C422244F1030084D725 /* Controller */,
+				29263C462244F1440084D725 /* Resources */,
+			);
+			path = "Goal Post";
+			sourceTree = "<group>";
+		};
+		29263C422244F1030084D725 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				29263C2F2244EFFB0084D725 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		29263C432244F1110084D725 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29263C442244F11A0084D725 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		29263C452244F1310084D725 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		29263C462244F1440084D725 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29263C2D2244EFFB0084D725 /* AppDelegate.swift */,
 				29263C312244EFFB0084D725 /* Main.storyboard */,
 				29263C372244EFFC0084D725 /* Assets.xcassets */,
 				29263C392244EFFC0084D725 /* LaunchScreen.storyboard */,
 				29263C3C2244EFFC0084D725 /* Info.plist */,
 				29263C342244EFFB0084D725 /* Goal_Post.xcdatamodeld */,
 			);
-			path = "Goal Post";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
