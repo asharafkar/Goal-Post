@@ -56,6 +56,7 @@
 		29263C2C2244EFFB0084D725 /* Goal Post */ = {
 			isa = PBXGroup;
 			children = (
+				29263C3C2244EFFC0084D725 /* Info.plist */,
 				29263C452244F1310084D725 /* Extensions */,
 				29263C442244F11A0084D725 /* Enums */,
 				29263C432244F1110084D725 /* View */,
@@ -101,7 +102,6 @@
 				29263C312244EFFB0084D725 /* Main.storyboard */,
 				29263C372244EFFC0084D725 /* Assets.xcassets */,
 				29263C392244EFFC0084D725 /* LaunchScreen.storyboard */,
-				29263C3C2244EFFC0084D725 /* Info.plist */,
 				29263C342244EFFB0084D725 /* Goal_Post.xcdatamodeld */,
 			);
 			path = Resources;
