@@ -13,6 +13,7 @@ class CreateGoalVC: UIViewController {
     var goalType: GoalType = GoalType.shortTerm
     @IBOutlet weak var shortTermButton: UIButton!
     @IBOutlet weak var longTermButton: UIButton!
+    @IBOutlet weak var goalDescriptionText: UITextView!
     
     
     override func viewDidLoad() {
@@ -42,6 +43,23 @@ class CreateGoalVC: UIViewController {
     @IBAction func longTermPressed(_ sender: UIButton) {
          uiConfigure(goalType: .longTerm)
     }
+    
+    @IBAction func nextPressed(_ sender: UIButton) {
+        
+//        if let description = goalDescriptionText.text{
+//
+//        }
+        
+        guard let description = goalDescriptionText.text else { return }
+        
+        
+        guard let finishVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
+        
+        finishVC.initData(description: description, goalType: goalType)
+        
+        presentDetail(finishVC)
+    }
+    
     
     @IBAction func dismiss(_ sender: UIButton) {
         dismissDetail()
