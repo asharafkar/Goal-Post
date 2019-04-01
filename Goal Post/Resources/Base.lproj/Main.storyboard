@@ -60,7 +60,24 @@
                                     <constraint firstAttribute="trailing" secondItem="Od8-Ke-3E8" secondAttribute="trailing" constant="8" id="z2K-nT-bo0"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w47-k3-Plk">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-hQ-ZeO">
+                                <rect key="frame" x="85.5" y="308.5" width="204" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to GoalPost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llS-Kb-Tmh">
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To begin, create a goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ier-18-Uhx">
+                                        <rect key="frame" x="20" y="30.5" width="164.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w47-k3-Plk">
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -138,33 +155,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-hQ-ZeO">
-                                <rect key="frame" x="85.5" y="308.5" width="204" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to GoalPost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llS-Kb-Tmh">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To begin, create a goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ier-18-Uhx">
-                                        <rect key="frame" x="20" y="30.5" width="164.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="w47-k3-Plk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7KL-9E-0rf"/>
-                            <constraint firstItem="Tog-hQ-ZeO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ElD-TL-ueO"/>
+                            <constraint firstItem="Tog-hQ-ZeO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQA-wZ-Wvv"/>
                             <constraint firstItem="uC9-kn-ond" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MmD-nL-VY5"/>
                             <constraint firstItem="uC9-kn-ond" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OPe-C2-nC8"/>
                             <constraint firstItem="w47-k3-Plk" firstAttribute="top" secondItem="uC9-kn-ond" secondAttribute="bottom" id="PWp-qD-Omf"/>
                             <constraint firstItem="uC9-kn-ond" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Td1-uj-u4y"/>
-                            <constraint firstItem="Tog-hQ-ZeO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UKJ-bP-BQY"/>
+                            <constraint firstItem="Tog-hQ-ZeO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kut-Jk-GaK"/>
                             <constraint firstItem="w47-k3-Plk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="weV-EC-mbK"/>
                             <constraint firstItem="w47-k3-Plk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zPA-kD-Bm3"/>
                         </constraints>
