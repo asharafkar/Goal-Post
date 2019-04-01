@@ -46,10 +46,6 @@ class CreateGoalVC: UIViewController {
     
     @IBAction func nextPressed(_ sender: UIButton) {
         
-//        if let description = goalDescriptionText.text{
-//
-//        }
-        
         guard let description = goalDescriptionText.text else { return }
         
         

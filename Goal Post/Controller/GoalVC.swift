@@ -9,9 +9,13 @@
 import UIKit
 import CoreData
 
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
 class GoalVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var goals: [GoalEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,23 @@ class GoalVC: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = false
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetch { (completed) in
+            if completed{
+                if goals.count >= 1{
+                    tableView.isHidden = false
+                }else{
+                    tableView.isHidden = true
+                }
+            }else{
+                
+            }
+            tableView.reloadData()
+        }
+    }
+    
 
     @IBAction func addGoalPressed(_ sender: UIButton) {
         
@@ -35,7 +56,7 @@ extension GoalVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return goals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,7 +65,9 @@ extension GoalVC: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
-        cell.configure(description: "Eat Salad Twice a week.", type: .longTerm, progress: 10)
+        let goal = goals[indexPath.row]
+        
+        cell.configure(goal: goal)
         
         return cell
     }
@@ -54,5 +77,23 @@ extension GoalVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+extension GoalVC{
+    
+    func fetch(completion: (_ completed: Bool) -> ()){
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<GoalEntity>(entityName: "GoalEntity")
+        
+        do{
+            goals = try managedContext.fetch(fetchRequest)
+            print("Successfully fetched data.")
+            completion(true)
+        }catch{
+            debugPrint("Could not ferched: \n \(error.localizedDescription)")
+            completion(false)
+        }
+    }
+}
 
 

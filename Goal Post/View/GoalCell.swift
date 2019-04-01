@@ -22,10 +22,10 @@ class GoalCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(description: String, type: GoalType, progress: Int){
-        descriptionLabel.text = description
-        typeLabel.text = type.rawValue
-        progressLabel.text = "\(progress)"
+    func configure(goal: GoalEntity){
+        descriptionLabel.text = goal.desc
+        typeLabel.text = goal.type
+        progressLabel.text = "\(goal.progressValue)"
     }
 
 }
